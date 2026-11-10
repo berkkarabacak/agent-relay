@@ -1,0 +1,17 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+*.pyc
+playwright-report/
+test-results/
+AI_USAGE_GUIDE.md
+artifacts/
+coverage/
+*.db
+*.sqlite
+.DS_Store

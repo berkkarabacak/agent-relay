@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primitive-ink: oklch(0.19 0.018 135);
+    --primitive-panel: oklch(0.225 0.018 135);
+    --primitive-raised: oklch(0.26 0.021 135);
+    --primitive-line: oklch(0.33 0.025 135);
+    --primitive-text: oklch(0.955 0.018 120);
+    --primitive-muted: oklch(0.72 0.025 130);
+    --primitive-lime: oklch(0.89 0.19 122);
+    --primitive-red: oklch(0.68 0.19 25);
+    --background: var(--primitive-ink);
+    --foreground: var(--primitive-text);
+    --panel: var(--primitive-panel);
+    --raised: var(--primitive-raised);
+    --border: var(--primitive-line);
+    --muted-foreground: var(--primitive-muted);
+    --accent: var(--primitive-lime);
+    --danger: var(--primitive-red);
+    --radius: 0.5rem;
+    color-scheme: dark;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--background); }
+  body { margin: 0; min-width: 320px; min-height: 100dvh; background: var(--background); color: var(--foreground); font-size: 16px; line-height: 1.55; }
+  button, input, textarea, select { font: inherit; }
+  button, a, select { -webkit-tap-highlight-color: transparent; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  ::selection { background: color-mix(in oklch, var(--accent) 28%, transparent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  ::-webkit-scrollbar { width: 9px; height: 9px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border: 2px solid transparent; border-radius: 8px; background-clip: padding-box; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
