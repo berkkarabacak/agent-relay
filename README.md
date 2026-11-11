@@ -1,5 +1,8 @@
 # AgentRelay
 
+Public preview: https://berkkarabacak.github.io/agent-relay/
+Source repository: https://github.com/berkkarabacak/agent-relay
+
 A local control plane for long-running Claude Managed Agents. Each sticky agent gets:
 
 - a stable local API key such as `game-director`;
